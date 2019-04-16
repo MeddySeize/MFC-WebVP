@@ -1,0 +1,74 @@
+body{
+    margin: 0 auto;
+    font-size: 17px;
+    color: #009698;
+    line-height: 1.6;
+}
+
+h1{
+    margin: 0;
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+
+#showcase{
+    height: 800px;
+    background-image: url(prism.png);
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#showcase2{
+    height: 800px;
+    background-image: url(prism.png);
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#showcase .button{
+    font-size: 18px;
+    text-decoration: none;
+    color: #009698;
+    border: #009698 1px solid;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}
+
+li{
+    display: inline ;
+}
+
+li a{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 17px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+li a:hover{
+    background-color: #009698;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+.loginbox{
+    width: 320px;
+    height: 420px;
+    background: #000;
+    color: #fff;
+    top: 50%;
+    left: 40%;
+    position: absolute;
+}

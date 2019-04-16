@@ -97,15 +97,15 @@ section p{
 }
 
 section#Accueil{
-    background: url('Geom.png') no-repeat center center/cover;
+    background: url('/Images/Geom.png') no-repeat center center/cover;
 }
 
 section#Info {
-    background: url('poing.png') no-repeat center center/cover;
+    background: url('/Images/poing.png') no-repeat center center/cover;
 }
 
 section#Contact {
-    background: url('Portablesetfilles.png') no-repeat center center/cover;
+    background: url('/Images/Portablesetfilles.png') no-repeat center center/cover;
 }
 
 section .button{

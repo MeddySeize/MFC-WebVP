@@ -17,7 +17,7 @@ body{
 }
 
 @font-face{
-    font-family: TitleFont;
+    font-family: 'TitleFont';
     src: url("/Font/Bungee/BungeeLine.eot");
     src: url("/Font/Bungee/BungeeLine.woff2") format('woff2'),
          url("/Font/Bungee/BungeeLine.woff") format('woff'),
@@ -52,6 +52,7 @@ body{
     height: 60px;
     background: rgba(0,0,0,7);
     text-align: center;
+    margin: 0 auto;
 }
 
 nav ul{
@@ -76,6 +77,10 @@ nav ul{
 
 .navbar ul li a:hover{
     color: skyblue;
+}
+
+.login_form>form{
+    background: #ffffff;
 }
 
 /*.nav-right{

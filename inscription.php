@@ -1,5 +1,34 @@
 <?php
-session_start()
+session_start();
+include 'connexion_db.php';
+    $envoi = (isset($_POST['envoi'])) ? $_POST['envoi']: '';
+    $Nom = (isset($_POST['Nom'])) ? $_POST['Nom']: '';
+    $Prenom = (isset($_POST['Prenom'])) ? $_POST['Prenom']: '';
+    $user_id = (isset($_POST['user_id'])) ? $_POST['user_id']: '';
+    $user_mdp = (isset($_POST['user_mdp'])) ? $_POST['user_mdp']: '';
+    $confmdp = (isset($_POST['confmdp'])) ? $_POST['confmdp']: '';
+
+    if(isset($_POST['envoi']) AND
+    isset($_POST['Nom']) AND !empty($_POST['Nom']) AND
+    isset($_POST['Prenom']) AND !empty($_POST['Prenom']) AND
+    isset($_POST['user_id']) AND !empty($_POST['user_id']) AND
+    isset($_POST['user_mdp']) AND !empty($_POST['user_mdp']) AND
+    isset($_POST['confmdp']) AND $_POST['confmdp'] == $_POST['user_mdp']
+    ){
+
+      if ($envoi == true)
+      {
+        $req =  $bdd->query('SELECT * FROM utilisateur WHERE IdentUti = "'.$_POST['user_id'].'"')->rowCount();
+
+       if($req == 0)
+       {
+        echo("pepsi");
+        $cmd = "INSERT INTO utilisateur(id_utilisateur, nomUti, prenomUti, identUti, mdpUti,typeUti)
+        VALUES(NULL, '$Nom', '$Prenom','$user_id','$user_mdp','0');";
+        $bdd->query($cmd);
+       }
+      }
+    }
 
 
 ?>
@@ -11,7 +40,7 @@ session_start()
   <link rel="stylesheet" href="form.css">
 </head>
 <body>
-<?php $bdd = new PDO('mysql:host=localhost;dbname=webvp2', 'root', ''); ?>
+
 
   <!-- Ce formulaire permet à l'utilisateur de s'inscrire -->
 <form action="inscription.php" method="POST">
@@ -29,37 +58,40 @@ session_start()
       <br>
       <br>
       <label for="Identifiant"><b>Identifiant</b></label><br>
-      <input type="text" placeholder="Entrez votre Identifiant" name="Identifiant" required>
+      <input type="text" placeholder="Entrez votre Identifiant" name="user_id" required>
       <br>
       <br>
       <label for="Motdepasse"><b>Mot de passe</b></label><br>
-      <input type="password" placeholder="Obligatoire" name="Motdepasse" required>
+      <input type="password" placeholder="Obligatoire" name="user_mdp" required>
       <br>
       <br>
       <label for="VerifMdp"><b>Confirmation du mot de passe</b></label><br>
-      <input type="password" placeholder="Obligatoire " name="VerifMdp" required>
+      <input type="password" placeholder="Obligatoire " name="confmdp" required>
       <br>
       <br>
-      <button type="submit" name="envoi" class="validebtn">Valider</button>
+      <input type="hidden" name="envoi" class="validebtn" value="true">
+      <input type="submit" class="validebtn" value="Valider">
+      
+
     </div>
 
-    <?php
+  <?php
     //Indication de la base de donnée à modifier
-    if (isset($_POST['envoi']) AND 
-			isset($_POST['Nom']) AND !empty($_POST['Nom']) AND 
-			isset($_POST['Prenom']) AND !empty($_POST['']) AND
-      isset($_POST['confmdp']) AND $_POST['confmdp'] == $_POST['mdp'])
-      
-    $req = $bdd->query('select * from utilisateur where nomUti = "'.$_POST['nom'].'"')->rowCount();
+    /*$envoi = (isset($_POST['save'])) ? $_POST['save']: '';
+    $nom = (isset($_POST['nom'])) ? $_POST['nom']: '';
+    $prenom = (isset($_POST['prenom'])) ? $_POST['prenom']: '';
+    $login = (isset($_POST['login'])) ? $_POST['login']: '';
+    $pass1 = (isset($_POST['pass'])) ? $_POST['pass']: '';
+    $pass2 = (isset($_POST['pass'])) ? $_POST['pass']: '';
 
-    if ($req == 0)
-			{
-				$sent = 'insert into utilisateur(nomUti, prenomUti, typeUti, identificationUti, Mdp) values(\''.$_POST['login'].'\',\''.$_POST['mdp'].'\',0)';
-				$bdd->exec($sent);
-		?>
-    
-			
-		?>
+    if($save == 'true'){
+      //todo verif
+      $cmd = // Récuperer de la base de donnée
+      $dbc->query(cmd);
+    }
+    */
+    ?>
+
 
 </div>
 </body>

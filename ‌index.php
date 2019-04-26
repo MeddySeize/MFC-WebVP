@@ -1,51 +1,25 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <link rel="stylesheet" href="/css/Show.css">
+  <link rel="stylesheet" href="/WEBVP_PPE2/css/Show.css">
   <meta charset="UTF-8"/>
   <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   
   <title>Bienvenue sur WEBVP</title>
  </head>
- <?php 
- 
- ?>
  <body>
      <!--La navigation qui est collée en de la page. elle est constituée de 4 éléments: Accueil, A propos, Insc/Co,Contact.
     Elle permet de rendre à la section demandée.-->
-    <div id="container">
-      <nav class="navbar">
+     <div id="container">
+    <nav class="navbar">
         <ul>
             <li><a href="#Accueil">Accueil</a></li>
             <li><a href="#Info">à Propos</a></li>
             <li><a href="#Contact">Contact</a></li>
             <li><a href="#">Inscription/Connexion</a></li>
         </ul>
-      </nav>
-    </div>
-    <!--utiliser un slide Down de javascript
-        coder la connexion: verifier info avec bdd
-    -->
-    <div class="login_form">
-        <form action="connexion_uti" method="POST">
-          <div>
-            <label>Identifiant:</label>
-            <br>
-            <input type="text" Required/>
-          </div>
-          <div>
-            <label>Mot de passe:</label>
-            <br>
-            <input type="password" Required/>
-          </div>
-          <div>
-            <input type="submit" value="Connexion"/>
-          </div>
-          <div>
-            <a href="#">Pas inscrit? Cliquer ici!</a>
-          </div>
-        </form>
+    </nav>
     </div>
     <!--Représente chaque compartiment de la page Ex: Bienvenue sur WebVP, MFC,Nous Contacter-->
     <section id="Accueil">

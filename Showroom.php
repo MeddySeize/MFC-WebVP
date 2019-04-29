@@ -8,9 +8,7 @@
   
   <title>Bienvenue sur WEBVP</title>
  </head>
- <?php 
  
- ?>
  <body>
      <!--La navigation qui est collée en de la page. elle est constituée de 4 éléments: Accueil, A propos, Insc/Co,Contact.
     Elle permet de rendre à la section demandée.-->
@@ -28,7 +26,7 @@
         coder la connexion: verifier info avec bdd
     -->
     <div class="login_form">
-        <form action="connexion_uti" method="POST">
+        <form action="connexion_uti.php" method="POST">
           <div>
             <label>Identifiant:</label>
             <br>
@@ -43,7 +41,7 @@
             <input type="submit" value="Connexion"/>
           </div>
           <div>
-            <a href="#">Pas inscrit? Cliquer ici!</a>
+            <a href="inscription.php">Pas inscrit? Cliquer ici!</a>
           </div>
         </form>
     </div>
@@ -59,7 +57,7 @@
      <h1>MFC, Formation pour tous</h1>
      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit felis eget sapien vehicula convallis.
     Nullam tincidunt risus a felis tincidunt, nec consequat eros ultricies. Curabitur sit amet maximus diam</p>
-
+    <a href="PageFormation.htm" class="button">En savoir plus</a>
     </section>
     <section id="Contact">
     <h1>Nous Contacter</h1>

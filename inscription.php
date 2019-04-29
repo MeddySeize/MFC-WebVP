@@ -22,10 +22,10 @@ include 'connexion_db.php';
 
        if($req == 0)
        {
-        echo("pepsi");
         $cmd = "INSERT INTO utilisateur(id_utilisateur, nomUti, prenomUti, identUti, mdpUti,typeUti)
         VALUES(NULL, '$Nom', '$Prenom','$user_id','$user_mdp','0');";
         $bdd->query($cmd);
+        header("location: Showroom.php");
        }
       }
     }
@@ -37,7 +37,7 @@ include 'connexion_db.php';
 <head>
   <meta charset="utf-8">
   <title> Inscription</title>
-  <link rel="stylesheet" href="form.css">
+  <link rel="stylesheet" href="/form.css">
 </head>
 <body>
 
@@ -45,32 +45,32 @@ include 'connexion_db.php';
   <!-- Ce formulaire permet à l'utilisateur de s'inscrire -->
 <form action="inscription.php" method="POST">
     <div class="container">
-      <h1 style="text-align: center;">Inscription</h1>
+      <h1 style="text-align: center; color:white">Inscription</h1>
       <hr>
       <div class="content">
-      <p>Veuillez entrer vos informations pour créer un Compte</p>
-      <label for= "Nom"><b>Nom</b></label><BR>
-      <input type="text" placeholder="Entrez votre Nom" name="Nom" required>
+      <p style="color:white;">Veuillez entrer vos informations pour créer un Compte</p>
+      <label style="color:white;" for= "Nom"><b>Nom</b></label><BR>
+      <input style="color:white;"type="text" placeholder="Entrez votre Nom" name="Nom" required>
        <br>
        <br>
-      <label for= "Prenom"><b>Prénom</b></label><br>
-      <input type="text" placeholder="Entrez votre Prénom" name="Prenom" required>
+      <label style="color:white;"for= "Prenom"><b>Prénom</b></label><br>
+      <input style="color:white;" type="text" placeholder="Entrez votre Prénom" name="Prenom" required>
       <br>
       <br>
-      <label for="Identifiant"><b>Identifiant</b></label><br>
-      <input type="text" placeholder="Entrez votre Identifiant" name="user_id" required>
+      <label style="color:white;" for="Identifiant"><b>Identifiant</b></label><br>
+      <input style="color:white;" type="text" placeholder="Entrez votre Identifiant" name="user_id" required>
       <br>
       <br>
-      <label for="Motdepasse"><b>Mot de passe</b></label><br>
-      <input type="password" placeholder="Obligatoire" name="user_mdp" required>
+      <label style="color:white;" for="Motdepasse"><b>Mot de passe</b></label><br>
+      <input style="color:white;"type="password" placeholder="Obligatoire" name="user_mdp" required>
       <br>
       <br>
-      <label for="VerifMdp"><b>Confirmation du mot de passe</b></label><br>
-      <input type="password" placeholder="Obligatoire " name="confmdp" required>
+      <label style="color:white;" for="VerifMdp"><b>Confirmation du mot de passe</b></label><br>
+      <input style="color:white;" type="password" placeholder="Obligatoire " name="confmdp" required>
       <br>
       <br>
-      <input type="hidden" name="envoi" class="validebtn" value="true">
-      <input type="submit" class="validebtn" value="Valider">
+      <input style="color:white;" type="hidden" name="envoi" class="validebtn" value="true">
+      <input style="color:white;" type="submit" class="validebtn" value="Valider">
       
 
     </div>

@@ -79,8 +79,9 @@ nav ul{
     color: skyblue;
 }
 
-.login_form>form{
-    background: #ffffff;
+body>.login_form>form{
+    background-color: black;
+    color: #ffffff;
 }
 
 /*.nav-right{

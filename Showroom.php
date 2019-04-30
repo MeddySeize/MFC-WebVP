@@ -23,7 +23,7 @@
       </nav>
     </div>
     <!--utiliser un slide Down de javascript
-        coder la connexion: verifier info avec bdd
+      La div ne prend pas de style, c'est bizarre. à arranger
     -->
     <div class="login_form">
         <form action="connexion_uti.php" method="POST">

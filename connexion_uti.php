@@ -14,12 +14,15 @@
 
  if ($data['nbr'] == 1)
  {
-   echo("heelo");
+   echo
     $_SESSION["is_loged"] = "true";
     $_SESSION["id"] = $data['id_utilisateur'] ;
     $_SESSION["type"] = "user";
     $_SESSION["name"] = $data['nomUti'] . " " .$data['prenomUti'];
+    header("location: PageAccueil.htm");
 }
+else
+{
 
-header("location: PageAccueil.htm");
+}
  ?>

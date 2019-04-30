@@ -27,7 +27,7 @@ input[type=text], input[type=password] {
     display: inline-block;
     border: none;
     background: white;
-    color: white;
+    color: black;
   }
 
 .validebtn{
@@ -50,20 +50,10 @@ input[type=text], input[type=password] {
     margin-bottom: 15px;
     text-align: center;
   }
-  
-  /* The close button */
-  .closebtn {
-    margin-left: 15px;
+.goodalert{
+    padding: 20px;
+    background-color:green; /* Red */
     color: white;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  /* When moving the mouse over the close button */
-  .closebtn:hover {
-    color: black;
-  }
+    margin-bottom: 15px;
+    text-align: center;
+}

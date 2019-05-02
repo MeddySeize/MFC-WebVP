@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html>
  <head>
@@ -5,10 +8,9 @@
   <meta charset="UTF-8"/>
   <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  
   <title>Bienvenue sur WEBVP</title>
  </head>
- 
+
  <body>
      <!--La navigation qui est collée en de la page. elle est constituée de 4 éléments: Accueil, A propos, Insc/Co,Contact.
     Elle permet de rendre à la section demandée.-->
@@ -26,16 +28,16 @@
       La div ne prend pas de style, c'est bizarre. à arranger
     -->
     <div class="login_form">
-        <form action="connexion_uti.php" method="POST">
+        <form action="Showroom.php" method="POST">
           <div>
             <label>Identifiant:</label>
             <br>
-            <input type="text" Required/>
+            <input type="text"  name = "UtiID"Required/>
           </div>
           <div>
             <label>Mot de passe:</label>
             <br>
-            <input type="password" Required/>
+            <input type="password" name="Utimdp" Required/>
           </div>
           <div>
             <input type="submit" value="Connexion"/>

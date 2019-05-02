@@ -19,7 +19,7 @@
     $_SESSION["id"] = $data['id_utilisateur'] ;
     $_SESSION["type"] = "user";
     $_SESSION["name"] = $data['nomUti'] . " " .$data['prenomUti'];
-    header("location: PageAccueil.php");
+    header("location: index.php");
 }
 else
 {

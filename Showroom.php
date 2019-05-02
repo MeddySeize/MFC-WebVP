@@ -64,13 +64,13 @@
     <p>Avec plus de 70  formateurs et plus de 10000 personnes formées par an ,
         nous offrons la chance d'être un(e) acteur/trice dans le secteur de la formation.</p>
        <p>Que vous voulez <strong>enseigner</strong> ou <strong>étudier</strong>, Notre plateforme <strong>"WEBVP"</strong> à votre disposition. </p>
-       <a href="PageFormation.htm" class="button">Voir nos Formations</a>
+       <a href="PageFormation.php" class="button">Voir nos Formations</a>
      </section>
      <section id="Info">
      <h1>MFC, Formation pour tous</h1>
      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit felis eget sapien vehicula convallis.
     Nullam tincidunt risus a felis tincidunt, nec consequat eros ultricies. Curabitur sit amet maximus diam</p>
-    <a href="PageFormation.htm" class="button">En savoir plus</a>
+    <a href="PageFormation.php" class="button">En savoir plus</a>
     </section>
     <section id="Contact">
     <h1>Nous Contacter</h1>

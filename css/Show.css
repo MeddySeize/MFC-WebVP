@@ -34,7 +34,7 @@ body{
     font-style: normal;
 }
 
-@-webkit-keyframes fontfix {
+@keyframes fontfix {
     from { opacity: 1; }
     to   { opacity: 1; }
    }
@@ -79,8 +79,13 @@ nav ul{
     color: skyblue;
 }
 
+<<<<<<< HEAD
 body>.login_form>form{
     background-color: black;
+=======
+.login_form>form{
+    background: black;
+>>>>>>> test
     color: #ffffff;
 }
 
@@ -137,3 +142,17 @@ section .button{
     top: 8%;
 }
 
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+.goodalert{
+    padding: 20px;
+    background-color:green; /* Red */
+    color: white;
+    margin-bottom: 0px;
+    text-align: center;
+}

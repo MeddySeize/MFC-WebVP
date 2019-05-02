@@ -10,6 +10,7 @@ session_start();
   <link rel="stylesheet" href="/form.css">
 </head>
 <body>
+
 <?php
 
   if(isset($_GET['Taken'])==true)

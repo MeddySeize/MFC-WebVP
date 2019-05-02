@@ -19,7 +19,7 @@
                     <li><a class="nav active" href="PageAccueil.htm">Accueil</a></li>
                     <li><a class="nav" href="PageFormation.htm">Formation</a></li> 
                     <li><a class="nav" href="PageContact.htm">Contact</a></li> 
-                    <li><a class="nav-right" href="#">Autres</a></li> 
+                    <li><a class="nav-right" href="Showroom.php">Autres</a></li> 
                 </ul><!--C'est la barra de navigation-->
                 </nav>
 

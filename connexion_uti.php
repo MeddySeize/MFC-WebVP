@@ -3,7 +3,7 @@
  session_start();
  include 'connexion_db.php';
  $IdUti = (isset($_POST["UtiID"]))? $_POST["UtiID"] : "";
- $MPUti = (isset($_POST["UtiMdp"]))? $_POST["UtiMdp"] : "";
+ $MPUti = (isset($_POST["Utimdp"]))? $_POST["Utimdp"] : "";
 
  $cmd = "SELECT count(*) as nbr, nomUti, prenomUti , id_utilisateur FROM utilisateur
  WHERE identUti = '$IdUti' and
@@ -19,10 +19,10 @@
     $_SESSION["id"] = $data['id_utilisateur'] ;
     $_SESSION["type"] = "user";
     $_SESSION["name"] = $data['nomUti'] . " " .$data['prenomUti'];
-    header("location: PageAccueil.htm");
+    header("location: PageAccueil.php");
 }
 else
 {
-  echo 'mauvais id';
+  header("Location:Showroom.php?BadID=True");
 }
  ?>

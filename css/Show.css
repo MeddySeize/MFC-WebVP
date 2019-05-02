@@ -137,3 +137,17 @@ section .button{
     top: 8%;
 }
 
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+.goodalert{
+    padding: 20px;
+    background-color:green; /* Red */
+    color: white;
+    margin-bottom: 0px;
+    text-align: center;
+}

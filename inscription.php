@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -6,10 +10,18 @@
   <link rel="stylesheet" href="/form.css">
 </head>
 <body>
+<?php
 
+  if(isset($_GET['Taken'])==true)
+  {
+    $mess = "<div class='alert'> Cet identifiant est déjà pris. Merci de choisir un autre.</div>";
+    echo $mess;
+  }
+
+?>
   <!-- Ce formulaire permet à l'utilisateur de s'inscrire -->
   <!--Mettre une autocomplete: off quand page inscription fini-->
-<form action="inscription.php" method="POST">
+<form action="inscription_uti.php" method="POST">
     <div class="container">
       <h1 style="text-align: center; color:white">Inscription</h1>
       <hr>
@@ -38,27 +50,7 @@
       <!--Mettre une autre couleur quand souris passe. ça fait beau :)-->
       <input style="color:white;" type="hidden" name="envoi" class="validebtn" value="true">
       <input type="submit" class="validebtn" value="Valider">
-      
-
     </div>
-
- 
-    <!--Indication de la base de donnée à modifier
-    /*$envoi = (isset($_POST['save'])) ? $_POST['save']: '';
-    $nom = (isset($_POST['nom'])) ? $_POST['nom']: '';
-    $prenom = (isset($_POST['prenom'])) ? $_POST['prenom']: '';
-    $login = (isset($_POST['login'])) ? $_POST['login']: '';
-    $pass1 = (isset($_POST['pass'])) ? $_POST['pass']: '';
-    $pass2 = (isset($_POST['pass'])) ? $_POST['pass']: '';
-
-    if($save == 'true'){
-      //todo verif
-      $cmd = // Récuperer de la base de donnée
-      $dbc->query(cmd);
-    }
-  -->
-
-
 </div>
 </body>
 </html>

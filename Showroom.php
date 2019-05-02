@@ -1,6 +1,6 @@
-
-
-
+<?php
+ session_start();
+?>
 <!DOCTYPE html>
 <html>
  <head>
@@ -24,11 +24,17 @@
         </ul>
       </nav>
     </div>
-    <!--utiliser un slide Down de javascript
-      La div ne prend pas de style, c'est bizarre. à arranger
-    -->
+    <!--utiliser un slide Down de javascript Jquery-->
+    <!--le message continue de s'afficher. Trouver une solution-->
+    <?php
+      if(isset($_GET['Created'])==true)
+      {
+        echo "<div class='goodalert'><p style= color: green;>Votre Compte à été créé.</p> </div>";
+        $_GET['Created']=false;
+      }
+    ?>
     <div class="login_form">
-        <form action="Showroom.php" method="POST">
+        <form action="connexion_uti.php" method="POST">
           <div>
             <label>Identifiant:</label>
             <br>

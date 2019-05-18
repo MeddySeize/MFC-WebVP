@@ -29,7 +29,7 @@
     <?php
       if(isset($_GET['Created'])==true)
       {
-        echo "<div class='goodalert'><p style= color: green;>Votre Compte à été créé.</p> </div>";
+        echo "<div class='goodalert'><p style= color: green;>Votre compte a été créé.</p> </div>";
       }
 
       if(isset($_GET['BadID'])==true)

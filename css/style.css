@@ -6,6 +6,7 @@ body{
     position: relative;
     background-color: black;
     overflow: hidden;
+    text-decoration: none;
 }
 
 .topnav a {
@@ -21,3 +22,15 @@ body{
     background-color: skyblue;
     color: white;
 }
+
+li{
+    display:inline;
+
+}
+
+ul{
+    display:block;
+}
+
+
+

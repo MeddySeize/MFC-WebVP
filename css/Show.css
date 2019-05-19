@@ -79,16 +79,14 @@ nav ul{
     color: skyblue;
 }
 
-<<<<<<< HEAD
+
 body>.login_form>form{
     background-color: black;
-=======
-.login_form>form{
+}
+.login_form{
     background: black;
->>>>>>> test
     color: #ffffff;
 }
-
 /*.nav-right{
     float: right;
     margin-left:200px;
@@ -120,7 +118,7 @@ section p{
 }
 
 section#Accueil{
-    background: url('/Images/Geom.png') no-repeat center center/cover;
+    background: url(/Images/Geom.png) no-repeat center center/cover;
 }
 
 section#Info {
@@ -128,7 +126,7 @@ section#Info {
 }
 
 section#Contact {
-    background: url('/Images/Portablesetfilles.png') no-repeat center center/cover;
+    background: url('Images/Portablesetfilles.png') no-repeat center center/cover;
 }
 
 section .button{

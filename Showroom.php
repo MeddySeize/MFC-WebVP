@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <link rel="stylesheet" href="/css/Show.css">
+  <link rel="stylesheet" href="css/Show.css">
   <meta charset="UTF-8"/>
   <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">

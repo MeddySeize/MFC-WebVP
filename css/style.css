@@ -13,7 +13,7 @@ body{
 }
 
 #top .offer{
-    color: #ffffff
+    color: #ffffff;
 }
 
 #top .offer .btn{
@@ -25,7 +25,7 @@ body{
         margin-bottom: 10px;
     }
 }
-@media(max-width: 991px){
+@media(max-width: 1991px){
     #top{
         font-size: 12px;
         text-align: center;
@@ -34,8 +34,29 @@ body{
 #top a{
     color: #ffffff;
 }
-top ul.menu{
+#top ul.menu{
     padding-top: 5px;
     margin: 0px;
     text-align: right;
+    font-size: 12px;
+    list-style: none;
+}
+
+@media(max-width: 1551px){
+    #top ul.menu{
+        text-align: center;
+    }
+    #top ul.menu> li{
+        display: inline-block;
+    }
+    
+    #top ul.menu> li a{
+        color: #eeeeee;
+    }
+    
+    #top ul.menu>li + li:before{
+        content: "|\00a0";
+        color: #f7f7f7;
+        padding: 0px 5px;    
+    }
 }

@@ -51,7 +51,11 @@
    <div id="container"><!-- navbar container debut-->
 
    <div class="navbar-header"><!-- navbar container header debut-->
-   <a href="index.php" class="navbar-brand home"></a>
+
+   <a href="index.php" class="navbar-brand home">
+
+    <img src="im/" alt="" class="logo">
+   </a>
 
 
    </div><!-- navbar container header fin-->

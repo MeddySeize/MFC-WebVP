@@ -27,7 +27,7 @@
             
               <ul class="menu"><!--cmenu debut-->
                   <li>
-                      <a href="inscription.php">Incription</a>
+                      <a href="inscription.php">Inscription</a>
                   </li>
                   <li>
                       <a href="Profil.php">Mon compte</a>
@@ -54,7 +54,9 @@
 
    <a href="index.php" class="navbar-brand home">
 
-    <img src="im/" alt="" class="logo">
+    <img src="Images/logo.png" alt="Logo Mfc">
+
+
    </a>
 
 

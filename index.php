@@ -7,13 +7,14 @@
     <!--declaration des fichiers style: Bootstrap et fontawesome-->
     <link rel="stylesheet" href="css/bootstrap-337.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="fontawesome-free-5.8.2-web/css/all.css">
+    <link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
     <!--declaration des fichiers javascript: JQUERY et bootstrap js-->
     <script type="text/javascript" src="js/jquery-331.min.js"></script>
     <script src="js/bootstrap-337.min.js"></script>
     <title>Accueil WebVp</title>
     
 </head>
+<!--Mettre showroom.php sur la page d'acceuil-->
 <body>
    <div id="top"><!-- top debut -->
       <div class="container"><!--container debut-->
@@ -30,12 +31,6 @@
                       <a href="inscription.php">Inscription</a>
                   </li>
                   <li>
-                      <a href="Profil.php">Mon compte</a>
-                  </li>
-                  <li>
-                      <a href="Panier.php">Panier</a>
-                  </li>
-                  <li>
                       <a href="Profil.php">Se connecter</a>
                   </li>
               </ul><!--cmenu fin -->
@@ -48,17 +43,58 @@
 
  <div id="navbar" class="navbar navbar-default"><!--navbar debut-->
 
-   <div id="container"><!-- navbar container debut-->
+ <div id="container"><!-- navbar container debut-->
+        <div class="navbar-header"><!-- navbar  header debut-->
+         <a href="index.php" class="navbar-brand home">
+          <img src="Images/logo.png" alt="Logo Mfc">
+         </a>
+         <button class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+             <span class="sr-only">Basculer vers navigation</span>
+             <i class="fa fa-align-justify"></i>
+         </button>
 
-   <div class="navbar-header"><!-- navbar container header debut-->
+         <button class="navbar-toggle" data-toggle="collapse" data-target="#search">
+         <span class="sr-only">Basculer vers recherche</span>
+            <i class="fa fa-search"></i>
+         </button>
+        </div><!--navbar header fin-->
+        <div class="navbar-collapse" id="navigation"><!-- debut navbar collapse -->
+            <div class="padding-nav"> <!-- debut padding-nav -->
+              <ul class="nav navbar-nav left"><!-- debut nav navbar-nav left -->
+                  <li class="active">
+                      <a href="index.php">Accueil</a>
+                  </li>
+                  <li>
+                      <a href="shopping.php">Formations</a>
+                  </li>
+                  <li>
+                      <a href="Profil.php">Mon compte</a>
+                  </li>
+                  <li>
+                      <a href="Panier.php">Mon Panier</a>
+                  </li>
+                  <li>
+                      <a href="Contact.php">Contactez-nous</a>
+                  </li>
+              </ul><!-- fin nav navbar-nav left -->
 
-   <a href="index.php" class="navbar-brand home">
+            </div><!-- fin padding-nav -->
 
-    <img src="Images/logo.png" alt="Logo Mfc">
+            <a href="Panier.php" class="btn navbar-btn btn-primary right"><!-- debut btn navbar-btn btn-primary right -->
+                <i class="fa fa-shopping-cart"></i>
+                <span>4 Items in your cart</span>
+            </a><!-- fin btn navbar-btn btn-primary right -->
 
+            <div class="navbar-collapse collapse right"><!-- debut navbar-collapse collapse right -->
+            <button class="btn btn-primary navbar-btn" type="button" data-toggle="collapse" data-target="#search">
+                <span class="sr-only">Toggle Search</span>
+                <i class="fa fa-search"></i>
+            </button>
+            </div><!--fin navbar-collapse collapse right -->
 
-   </a>
-
+        </div>
+    </div><!-- navbar container fin-->
+</div><!--navbar fin-->
 
    </div><!-- navbar container header fin-->
 
@@ -67,7 +103,26 @@
 
 
  </div><!--navbar fin-->
-
+ <div class="shw-container">
+ <section id="Accueil">
+     <h1>Bienvenue sur WebVP</h1>
+    <p>Avec plus de 70  formateurs et plus de 10000 personnes formées par an ,
+        nous offrons la chance d'être un(e) acteur/trice dans le secteur de la formation.</p>
+       <p>Que vous voulez <strong>enseigner</strong> ou <strong>étudier</strong>, Notre plateforme <strong>"WEBVP"</strong> à votre disposition. </p>
+       <a href="PageFormation.php" class="button">Voir nos Formations</a>
+     </section>
+     <section id="Info">
+     <h1>MFC, Formation pour tous</h1>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit felis eget sapien vehicula convallis.
+    Nullam tincidunt risus a felis tincidunt, nec consequat eros ultricies. Curabitur sit amet maximus diam</p>
+    <a href="PageFormation.php" class="button">En savoir plus</a>
+    </section>
+    <section id="Contact">
+    <h1>Nous Contacter</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit felis eget sapien vehicula convallis.
+    Nullam tincidunt risus a felis tincidunt, nec consequat eros ultricies. Curabitur sit amet maximus diam</p>
+    </section>
+</div>
 
 </body>
 </html>

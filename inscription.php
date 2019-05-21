@@ -7,7 +7,7 @@ session_start();
 <head>
   <meta charset="utf-8">
   <title> Inscription</title>
-  <link rel="stylesheet" href="css/form.css">
+ <!-- <link rel="stylesheet" href="css/form.css"> -->
 </head>
 <body>
 
@@ -52,6 +52,6 @@ session_start();
       <input style="color:white;" type="hidden" name="envoi" class="validebtn" value="true">
       <input type="submit" class="validebtn" value="Valider">
     </div>
-</div>
+</form>
 </body>
 </html>

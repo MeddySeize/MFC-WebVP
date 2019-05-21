@@ -26,7 +26,7 @@ if(isset($_POST['envoi']))
     $res= $db->query($cmd);
     header("Location:Showroom.php?Created=true");
     }
-    //Le panneau s'affiche quand  la page s'actualise. 0 R2PARERE è_é. 
+    //Le panneau s'affiche quand  la page s'actualise. 0 R2PARERE è_é.
      if ($req !=0 and !empty($_POST['user_id']))
       {
         //echo "<div class='alert'> Cet identifiant est déjà pris. Merci de choisir un autre.</div>";

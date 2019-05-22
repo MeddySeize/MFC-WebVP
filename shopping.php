@@ -27,18 +27,6 @@
             
               <ul class="menu"><!--cmenu debut-->
                   <li>
-                      <a href="Index.php">Accueil</a>
-                  </li>
-                  <li>
-                      <a href="shopping.php">Formation</a>
-                  </li>
-                  <li>
-                      <a href="Profil.php">Mon compte</a>
-                  </li>
-                  <li>
-                      <a href="Panier.php">Panier</a>
-                  </li>
-                  <li>
                       <a href="inscription.php">Inscription</a>
                   </li>
                   <li>
@@ -71,7 +59,7 @@
        </div><!--navbar header fin-->
        <div class="navbar-collapse" id="navigation"><!-- debut navbar collapse -->
            <div class="padding-nav"> <!-- debut padding-nav -->
-             <ul class="nav navbar-nav left">
+             <ul class="nav navbar-nav left"><!-- debut nav navbar-nav left -->
                  <li>
                      <a href="index.php">Accueil</a>
                  </li>
@@ -82,15 +70,35 @@
                      <a href="Profil.php">Mon compte</a>
                  </li>
                  <li>
-                     <a href="Panier.php">Mon Panier</a>
+                     <a href="Contact.php">Contactez-nous</a>
                  </li>
-                 <li>
-                     <a href="Contact.php">Contactez nous</a>
-                 </li>
-             </ul><!-- debut nav navbar-nav left -->
+             </ul><!-- fin nav navbar-nav left -->
 
            </div><!-- fin padding-nav -->
-       </div>
+
+           <a href="Panier.php" class="btn navbar-btn btn-primary right"><!-- debut btn navbar-btn btn-primary right -->
+               <i class="fa fa-shopping-cart"></i>
+               <span>Panier: 4 Items</span>
+           </a><!-- fin btn navbar-btn btn-primary right -->
+
+           <div class="navbar-collapse collapse right"><!-- debut navbar-collapse collapse right -->
+           <button class="btn btn-primary navbar-btn" type="button" data-toggle="collapse" data-target="#search">
+               <span class="sr-only">Toggle Search</span>
+               <i class="fa fa-search"></i>
+               <span>Rechercher</span>
+           </button>
+           </div><!--fin navbar-collapse collapse right -->
+           <div class="collapse clearfix" id="search"><!--debut collapse clearfix -->
+               <form method="get" action="resultat.php" class="navbar-form"><!--debut navbar-form -->
+                    <div class="input-group"><!--debut input-group -->
+                        <input type="text" class="form-control" placeholder="Quelle Formation?" name="user_query" required><!--debut form-control -->
+                        <button type="submit" name="search" value="Chercher" class="btn btn-primary"><!--debut btn btn-primary -->
+                            <i class="fa fa-search"></i>
+                        </button><!--fin btn btn-primary -->
+                    </div><!--fin input-group -->
+               </form><!--fin navbar-form -->
+           </div><!--fin collapse clearfix -->
+       </div><!-- fin navbar collapse -->
    </div><!-- navbar container fin-->
 </div><!--navbar fin-->
 <?php

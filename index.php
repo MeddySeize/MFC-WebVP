@@ -71,9 +71,6 @@
                       <a href="Profil.php">Mon compte</a>
                   </li>
                   <li>
-                      <a href="Panier.php">Mon Panier</a>
-                  </li>
-                  <li>
                       <a href="Contact.php">Contactez-nous</a>
                   </li>
               </ul><!-- fin nav navbar-nav left -->
@@ -82,40 +79,43 @@
 
             <a href="Panier.php" class="btn navbar-btn btn-primary right"><!-- debut btn navbar-btn btn-primary right -->
                 <i class="fa fa-shopping-cart"></i>
-                <span>4 Items in your cart</span>
+                <span>Panier: 4 Items</span>
             </a><!-- fin btn navbar-btn btn-primary right -->
 
             <div class="navbar-collapse collapse right"><!-- debut navbar-collapse collapse right -->
-            <button class="btn btn-primary navbar-btn" type="button" data-toggle="collapse" data-target="#search">
-                <span class="sr-only">Toggle Search</span>
-                <i class="fa fa-search"></i>
-            </button>
-            </div><!--fin navbar-collapse collapse right -->
-
-        </div>
-    </div><!-- navbar container fin-->
+           <button class="btn btn-primary navbar-btn" type="button" data-toggle="collapse" data-target="#search">
+               <span class="sr-only">Toggle Search</span>
+               <i class="fa fa-search"></i>
+               <span>Rechercher</span>
+           </button>
+           </div><!--fin navbar-collapse collapse right -->
+           <div class="collapse clearfix" id="search"><!--debut collapse clearfix -->
+               <form method="get" action="resultat.php" class="navbar-form"><!--debut navbar-form -->
+                    <div class="input-group"><!--debut input-group -->
+                        <input type="text" class="form-control" placeholder="Quelle Formation?" name="user_query" required><!--debut form-control -->
+                        <button type="submit" name="search" value="Chercher" class="btn btn-primary"><!--debut btn btn-primary -->
+                            <i class="fa fa-search"></i>
+                        </button><!--fin btn btn-primary -->
+                    </div><!--fin input-group -->
+               </form><!--fin navbar-form -->
+           </div><!--fin collapse clearfix -->
+       </div><!-- fin navbar collapse -->
+   </div><!-- navbar container fin-->
 </div><!--navbar fin-->
 
-   </div><!-- navbar container header fin-->
-
-
-   </div><!-- navbar container fin-->
-
-
- </div><!--navbar fin-->
  <div class="shw-container">
  <section id="Accueil">
      <h1>Bienvenue sur WebVP</h1>
     <p>Avec plus de 70  formateurs et plus de 10000 personnes formées par an ,
         nous offrons la chance d'être un(e) acteur/trice dans le secteur de la formation.</p>
        <p>Que vous voulez <strong>enseigner</strong> ou <strong>étudier</strong>, Notre plateforme <strong>"WEBVP"</strong> à votre disposition. </p>
-       <a href="PageFormation.php" class="button">Voir nos Formations</a>
+       <a href="shopping.php" class="button">Voir nos Formations</a>
      </section>
      <section id="Info">
      <h1>MFC, Formation pour tous</h1>
      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit felis eget sapien vehicula convallis.
     Nullam tincidunt risus a felis tincidunt, nec consequat eros ultricies. Curabitur sit amet maximus diam</p>
-    <a href="PageFormation.php" class="button">En savoir plus</a>
+    <a href="Info.php" class="button">En savoir plus</a>
     </section>
     <section id="Contact">
     <h1>Nous Contacter</h1>

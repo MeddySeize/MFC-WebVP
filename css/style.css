@@ -3,7 +3,7 @@ body{
     line-height: 1.42857143;
     color: #333333;
     background: #f0f0f0;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 /* Top Menu Style */
@@ -78,9 +78,7 @@ body{
         padding: 0px 5px;
     }
 }
-.navbar{
-    margin-bottom: 0px;
-}
+
 /* Fil d'ariane Style 
 
 .FilA{
@@ -96,7 +94,49 @@ body{
     content: "|\00a0"
 }
 */
+/*Header style */
 
+.navbar{
+    margin-bottom: 0px;
+    background: #ffffff
+}
+
+.navbar-collapse .right{
+    float: right;
+}
+
+.navbar-brand{
+   float: left;
+   position: relative;
+   padding-top: 10px;
+    /* padding: 10px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    height: 70px; */
+}
+
+.btn-primary{
+    color: rgb(255,255,255);
+    background: rgb(79,191,168);
+    border-color: rgb(65,179,156);
+}
+
+#search .navbar-form{
+    float: right;
+}
+
+#search{
+    clear: both; /*?*/
+    border-top: solid 1px #9adacd
+}
+
+#search .navbar-form .input-group{
+    display: table;
+}
+
+#search .navbar-form .input-group .form-control{
+    width: 100%;
+}
 /* Showroom index style */
 .shw-container{
     margin: 0;
@@ -106,7 +146,7 @@ body{
     color: black;
     line-height: 1.6;
     height: 100vh;
-    overflow-x: hidden;
+    overflow: scroll;
 }
 
 section{
@@ -120,12 +160,12 @@ section{
 }
 
 section h1{
-    font-size: 4rem;
+    font-size: 6rem;
     font-family: 'TitleFont', cursive;
 }
 
 section p{
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-family: 'ParagFont', cursive;
 }
 
@@ -167,4 +207,21 @@ section .button{
     text-align: center;
 }
 
+@font-face{
+    font-family: 'TitleFont';
+    src: url("/Font/Bungee/BungeeLine.eot");
+    src: url("/Font/Bungee/BungeeLine.woff2") format('woff2'),
+         url("/Font/Bungee/BungeeLine.woff") format('woff'),
+         url("/Font/Bungee/BungeeLine.ttf") format('truetype');
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'ParagFont';
+    src: url("/Font/Roboto/Roboto-Regular.eot");
+    src: url("/Font/Roboto/Roboto-Regular.woff2") format('woff2'),
+         url("/Font/Roboto/Roboto-Regular.woff") format('woff'),
+         url("/Font/Roboto/Roboto-Regular.ttf") format('truetype');
+    font-style: normal;
+}
 

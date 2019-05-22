@@ -92,17 +92,33 @@
                <form method="get" action="resultat.php" class="navbar-form"><!--debut navbar-form -->
                     <div class="input-group"><!--debut input-group -->
                         <input type="text" class="form-control" placeholder="Quelle Formation?" name="user_query" required><!--debut form-control -->
+                        <span class="input-group-btn"><!-- debut input-group-btn -->
                         <button type="submit" name="search" value="Chercher" class="btn btn-primary"><!--debut btn btn-primary -->
                             <i class="fa fa-search"></i>
                         </button><!--fin btn btn-primary -->
+                        </span><!-- fin input-group-btn -->
                     </div><!--fin input-group -->
                </form><!--fin navbar-form -->
            </div><!--fin collapse clearfix -->
        </div><!-- fin navbar collapse -->
    </div><!-- navbar container fin-->
 </div><!--navbar fin-->
-<?php
 
-?>
+<div id="content"><!--debut Content -->
+    <div class="container"><!--debut Container -->
+        <div class="col-md-12"><!--debut col-md-12 -->
+
+            <ul class="breadcrumb"><!--debut breadcrumb -->
+              <li>
+                <a href="index.php">Accueil</a>
+              </li>
+            <li>
+                Formations
+            </li>
+            </ul><!--fin breadcrumb -->
+        </div><!--fin col-md-12 -->
+    </div> <!--fin Container -->
+</div><!--fin Content -->
+
 
 </body>

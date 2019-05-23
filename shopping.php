@@ -117,6 +117,10 @@
             </li>
             </ul><!--fin breadcrumb -->
         </div><!--fin col-md-12 -->
+
+        <div class="col-md-3"><!--debut col-md-3 -->
+
+        </div><!--fin col-md-3 -->
     </div> <!--fin Container -->
 </div><!--fin Content -->
 

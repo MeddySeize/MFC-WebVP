@@ -56,7 +56,7 @@ body{
     #top ul.menu>li + li:before{
         content: "|\00a0";
         color: #f7f7f7;
-        padding: 0px 5px;    
+        padding: 0px 5px;
     }
 }
 
@@ -67,11 +67,11 @@ body{
     #top ul.menu> li{
         display: inline-block;
     }
-    
+
     #top ul.menu> li a{
         color: #eeeeee;
     }
-    
+
     #top ul.menu>li + li:before{
         content: "|\00a0";
         color: #f7f7f7;
@@ -144,6 +144,19 @@ body{
         padding: 8px 0px;
         text-align: center;
     }
+}
+/*Shopping style*/
+hr{
+ margin-top: 0px;
+}
+
+.right-cart{
+    float: right;
+    padding-bottom: 20px;
+}
+
+.panel {
+    margin-bottom: 50px;
 }
 /* Showroom index style */
 .shw-container{

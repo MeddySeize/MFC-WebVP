@@ -19,6 +19,12 @@ session_start();
     echo $mess;
   }
 
+  if(isset($_GET['Badconf'])==true)
+  {
+    $mess ="<div class='alert'> La confirmation est incorrecte.</div>";
+    echo $mess;
+  }
+
 ?>
   <!-- Ce formulaire permet à l'utilisateur de s'inscrire -->
   <!--Mettre une autocomplete: off quand page inscription fini-->

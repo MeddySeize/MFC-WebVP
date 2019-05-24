@@ -37,6 +37,7 @@ if(isset($_POST['envoi']))
       if ($req =! 0 and $_POST['confmdp'] != $_POST['user_mdp'])
       {
         echo "<div class='alert'> La confirmation est incorrecte.</div>";
+        header("Location:inscription.php? Badconf=true");
     }
 }
 ?>

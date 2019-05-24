@@ -65,7 +65,7 @@
                       <a href="index.php">Accueil</a>
                   </li>
                   <li>
-                      <a href="shopping.php">Formations</a>
+                      <a href="shopping.php?frm=1">Formations</a>
                   </li>
                   <li>
                       <a href="Profil.php">Mon compte</a>

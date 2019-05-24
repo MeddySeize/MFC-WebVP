@@ -123,8 +123,72 @@
         include("Include/MenuCote.php");
         ?>
         </div><!--fin col-md-3 -->
+
+        <!-- La partie ou s'affiche les formations -->
+        <div class="col-md-9"><!--debut col-md-9 -->
+            <div class="box"><!--debut box-->
+            <?php
+            /*
+            $cmd = "SELECT nomCat FROM categorie WHERE id_categorie =".$_GET['frm']."";
+            $res = $db->query($cmd);
+            $nomCateg = $res->fetchAll();
+            echo "<h1>$nomCateg</h1>"
+            */
+            /*code trop long, trouver alternative*/
+            if ($_GET['frm']== 1) {
+                echo "<h1>Management des SI</h1>";
+            } elseif ($_GET['frm'] == 2) {
+                echo "<h1>Projet</h1>";
+            } elseif ($_GET['frm'] == 3) {
+                echo "<h1>Infrastructure</h1>";
+            }
+            elseif ($_GET['frm'] == 4) {
+                echo "<h1>Réseau</h1>";
+            }
+            elseif ($_GET['frm'] == 5) {
+                echo "<h1>Développement</h1>";
+            }
+            elseif ($_GET['frm'] == 6) {
+                echo "<h1>Bureautique</h1>";
+            }
+            /*Mettre la description*/
+          ?>
+            </div><!--fin box-->
+            <div class="row">
+                <div class="col-md-12 col-sm-6 center-responsive">
+                    <?php
+                    /*requete pour mettre toutes les info dans un tableau*/
+                    if(isset($_GET['frm'])){
+                        $id = $_GET['frm'];
+                        $cmd = "SELECT * FROM formation WHERE id_categorie='$id';";
+                        $res = $db->query($cmd);
+                        $tableFrm = $res->fetchAll();
+                    }
+                    /* */
+                    if(isset($_GET['frm'])){
+                      foreach($tableFrm as $line){
+                        echo "<div class='panel panel-default .espace'>
+                        <div class='panel-heading'>".$line['nomForma']."</div>
+                        <div class='panel-body'>
+                        <i>".$line['descriptionForma']."</i><br><hr>
+                        <b>Prix de la Formation:</b> ".$line['prixForma']."€<br>
+                        <b>Lieu:</b> ".$line['lieuxForma']."<br>
+                        <b>Durée:</b> ".$line['dureeForma']." Jours
+                        </div>
+                        <p class='right-cart'>
+                        <a href='details.php' class='btn btn-primary a'>
+                            <i class='fa fa-shopping-cart'>
+                            Ajouter au Panier
+                            </i>
+                        </a>
+                        </p>
+                      </div>";
+                      }
+                    }
+                    ?>
+                </div>
+            </div>
+        </div><!--fin col-md-9 -->
     </div> <!--fin Container -->
 </div><!--fin Content -->
-
-
 </body>

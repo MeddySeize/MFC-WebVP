@@ -6,6 +6,10 @@ body{
     overflow: hidden;
 }
 
+.shopping-body{
+    overflow-y: visible;
+}
+
 /* Top Menu Style */
 #top{
     background: #555555;

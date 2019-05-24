@@ -14,7 +14,7 @@
     <title>Accueil WebVp</title>
 <head>
 
-<body>
+<body class="shopping-body">
    <div id="top"><!-- top debut -->
       <div class="container"><!--container debut-->
         

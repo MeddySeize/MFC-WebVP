@@ -17,7 +17,7 @@
    echo
    session_start();
     $_SESSION["is_loged"] = "true";
-    $_SESSION["id"] = $data['id_utilisateur'] ;
+    $_SESSION["id"] = $data['id_utilisateur']    ;
     $_SESSION["type"] = "user";
     $_SESSION["name"] = $data['nomUti'] . " " .$data['prenomUti'];
     header("location: index.php");

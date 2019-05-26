@@ -11,7 +11,7 @@
     <!--declaration des fichiers javascript: JQUERY et bootstrap js-->
     <script type="text/javascript" src="js/jquery-331.min.js"></script>
     <script src="js/bootstrap-337.min.js"></script>
-    <title>Accueil WebVp</title>
+    <title>Formation Webvp</title>
 <head>
 
 <body class="shopping-body">
@@ -24,16 +24,21 @@
           </div><!--col md 6 offre debut-->
         
           <div class="col-md-6"><!--col md 6 debut-->
-            
               <ul class="menu"><!--cmenu debut-->
+            
+               <?php
+               session_start();
+               if (!isset($_SESSION['id'])) {?> 
                   <li>
                       <a href="inscription.php">Inscription</a>
                   </li>
                   <li>
                       <a href="Profil.php">Se connecter</a>
                   </li>
+                <?php } else {?>
+                <li><a href="Profil.php"><?= $_SESSION['name'];?></a></li>
+                <?php } ?>
               </ul><!--cmenu fin -->
-            
           </div><!--col md 6 fin-->
         
       </div><!--container fin-->
@@ -64,7 +69,7 @@
                      <a href="index.php">Accueil</a>
                  </li>
                  <li class="active">
-                     <a href="shopping.php">Formations</a>
+                   <a href="shopping.php?frm=1">Formations</a>
                  </li>
                  <li>
                      <a href="Profil.php">Mon compte</a>

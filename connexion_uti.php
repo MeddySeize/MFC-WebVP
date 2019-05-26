@@ -15,6 +15,7 @@
  if ($data['nbr'] == 1)
  {
    echo
+   session_start();
     $_SESSION["is_loged"] = "true";
     $_SESSION["id"] = $data['id_utilisateur'] ;
     $_SESSION["type"] = "user";

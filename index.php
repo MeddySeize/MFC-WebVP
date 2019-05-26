@@ -27,6 +27,10 @@
           <div class="col-md-6"><!--col md 6 debut-->
             
               <ul class="menu"><!--cmenu debut-->
+              <?php if(!isset($_SESSION))
+              
+              
+              ?>
                   <li>
                       <a href="inscription.php">Inscription</a>
                   </li>

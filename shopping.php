@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+    session_start();
+?>
 <head>
     <meta charset="UTF-8">
     <!--Pour le responsive design-->
@@ -25,19 +28,12 @@
         
           <div class="col-md-6"><!--col md 6 debut-->
               <ul class="menu"><!--cmenu debut-->
-            
-               <?php
-               session_start();
-               if (!isset($_SESSION['id'])) {?> 
-                  <li>
+                    <li>
                       <a href="inscription.php">Inscription</a>
                   </li>
                   <li>
                       <a href="Profil.php">Se connecter</a>
                   </li>
-                <?php } else {?>
-                <li><a href="Profil.php"><?= $_SESSION['name'];?></a></li>
-                <?php } ?>
               </ul><!--cmenu fin -->
           </div><!--col md 6 fin-->
         
@@ -140,6 +136,9 @@
             echo "<h1>$nomCateg</h1>"
             */
             /*code trop long, trouver alternative*/
+            if  ($_GET['frm'] == 0) {
+                echo"<h1>Toutes les formations</h1>";
+            }
             if ($_GET['frm']== 1) {
                 echo "<h1>Management des SI</h1>";
             } elseif ($_GET['frm'] == 2) {
@@ -169,7 +168,13 @@
                         $res = $db->query($cmd);
                         $tableFrm = $res->fetchAll();
                     }
-                    /* */
+                    elseif ($_GET['frm'] == 0){
+                        $id = $_GET['frm'];
+                        $cmd = "SELECT * FROM formation;";
+                        $res = $db->query($cmd);
+                        $tableFrmAll = $res->fetchAll();
+                    }
+                    /* affichage de la formation à partir de base de donnée*/
                     if(isset($_GET['frm'])){
                       foreach($tableFrm as $line){
                         echo "<div class='panel panel-default .espace'>
@@ -190,6 +195,26 @@
                       </div>";
                       }
                     }
+                    else{
+                        foreach($tableFrmAll as $line){
+                          echo "<div class='panel panel-default .espace'>
+                          <div class='panel-heading'>".$line['nomForma']."</div>
+                          <div class='panel-body'>
+                          <i>".$line['descriptionForma']."</i><br><hr>
+                          <b>Prix de la Formation:</b> ".$line['prixForma']."€<br>
+                          <b>Lieu:</b> ".$line['lieuxForma']."<br>
+                          <b>Durée:</b> ".$line['dureeForma']." Jours
+                          </div>
+                          <p class='right-cart'>
+                          <a href='details.php' class='btn btn-primary a'>
+                              <i class='fa fa-shopping-cart'>
+                              Ajouter au Panier
+                              </i>
+                          </a>
+                          </p>
+                        </div>";
+                        }
+                      }
                     ?>
                 </div>
             </div>

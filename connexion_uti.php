@@ -11,16 +11,15 @@
 
  $res = $db->query($cmd);
  $data = $res->fetch();
-
- if ($data['nbr'] == 1)
+/* on dirait qu'il ne prends pas les assignement de valeur*/
+ if ($data['nbr'])
  {
-   echo
-   session_start();
+    session_start();
     $_SESSION["is_loged"] = "true";
-    $_SESSION["id"] = $data['id_utilisateur']    ;
+    $_SESSION["id"] = $data['id_utilisateur'];
     $_SESSION["type"] = "user";
-    $_SESSION["name"] = $data['nomUti'] . " " .$data['prenomUti'];
-    header("location: index.php");
+    $_SESSION["name"] = $data['identUti'];
+    header("location: shopping.php?frm=0");
 }
 else
 {

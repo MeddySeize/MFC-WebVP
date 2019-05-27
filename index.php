@@ -36,7 +36,6 @@
               <ul class="menu"><!--cmenu debut-->
               <?php if(!isset($_SESSION))
               
-              
               ?>
                   <li>
                       <a href="inscription.php">Inscription</a>

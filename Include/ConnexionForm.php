@@ -6,6 +6,7 @@
         </center>
     </div>
     <form action="connexion_uti.php" method="POST">
+      <div class="form-group">
           <div>
             <label>Identifiant:</label>
             <br>
@@ -28,5 +29,6 @@
             <a href="inscription.php">Pas inscrit? Cliquer ici!</a>
           </div>
         </form>
+        </div>
 </div>
 

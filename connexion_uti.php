@@ -1,6 +1,7 @@
 <?php
  //connexion
  session_start();
+ //Assigner une valeur au cases du formulaire
  include 'connexion_db.php';
  $IdUti = (isset($_POST["UtiID"]))? $_POST["UtiID"] : "";
  $MPUti = (isset($_POST["Utimdp"]))? $_POST["Utimdp"] : "";
@@ -14,11 +15,11 @@
 /* on dirait qu'il ne prends pas les assignement de valeur*/
  if ($data['nbr'])
  {
-    session_start();
-    $_SESSION["is_loged"] = "true";
+    $_SESSION["is_logged"] = true;
     $_SESSION["id"] = $data['id_utilisateur'];
     $_SESSION["type"] = "user";
-    $_SESSION["name"] = $data['identUti'];
+    $_SESSION['name'] = $IdUti;
+    $_SESSION['Panier'] = [];
     header("location: shopping.php?frm=0");
 }
 else

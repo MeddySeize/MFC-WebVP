@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,12 +30,23 @@
           <div class="col-md-6"><!--col md 6 debut-->
             
               <ul class="menu"><!--cmenu debut-->
-                  <li>
+              <?php if(!isset($_SESSION['is_logged']) == true){ ?>
+                    <li>
                       <a href="inscription.php">Inscription</a>
                   </li>
                   <li>
                       <a href="Profil.php">Se connecter</a>
                   </li>
+                  <?php } else{ ?>
+                  <li>
+                      <a href="Profil.php">
+                      Bonjour <?php echo $_SESSION['name'] ;?>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="deconnexion.php">Déconnexion</a>
+                  </li>
+                  <?php } ?>
               </ul><!--cmenu fin -->
             
           </div><!--col md 6 fin-->
@@ -119,7 +133,20 @@
         </div><!--fin col-md-12 -->
 
         <div class="col-md-12"><!--debut col-md-3 -->
-        <?php
-             include("Include/Connexion.php");
-        ?>
-        </div><!--fin col-md-3 -->
+        <?php if(!isset($_SESSION['is_logged']) == true){ ?>
+            <?php include("Include/ConnexionForm.php"); ?>
+        </div>
+        
+        <?php } else { ?>
+        <div class="col-md-4">
+            <?php include('Include/Menuprofil.php'); ?>
+        <?php } ?>
+        </div>
+        <div class="col-md-8">
+            <?php if (isset($_GET['Mcommandes'])){ 
+                echo "<h1>Mes Commandes</h1>";
+                
+            }
+            ?>
+        </div>
+</body>

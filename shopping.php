@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
 <?php
     session_start();
-?>
+    print_r($_SESSION);
+?><!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <!--Pour le responsive design-->
@@ -28,12 +28,23 @@
         
           <div class="col-md-6"><!--col md 6 debut-->
               <ul class="menu"><!--cmenu debut-->
+              <?php if(!isset($_SESSION['is_logged']) == true){ ?>
                     <li>
                       <a href="inscription.php">Inscription</a>
                   </li>
                   <li>
                       <a href="Profil.php">Se connecter</a>
                   </li>
+                  <?php } else{ ?>
+                  <li>
+                      <a href="Profil.php">
+                      Bienvenue <?php echo $_SESSION['name'] ;?>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="deconnexion.php">Déconnexion</a>
+                  </li>
+                  <?php } ?>
               </ul><!--cmenu fin -->
           </div><!--col md 6 fin-->
         
@@ -130,6 +141,7 @@
             <div class="box"><!--debut box-->
             <?php
             /*
+            début d'alternative:
             $cmd = "SELECT nomCat FROM categorie WHERE id_categorie =".$_GET['frm']."";
             $res = $db->query($cmd);
             $nomCateg = $res->fetchAll();
@@ -138,6 +150,7 @@
             /*code trop long, trouver alternative*/
             if  ($_GET['frm'] == 0) {
                 echo"<h1>Toutes les formations</h1>";
+                print_r($_SESSION["is_logged"]);
             }
             if ($_GET['frm']== 1) {
                 echo "<h1>Management des SI</h1>";
@@ -177,8 +190,8 @@
                     /* affichage de la formation à partir de base de donnée*/
                     if(isset($_GET['frm'])){
                       foreach($tableFrm as $line){
-                        echo "<div class='panel panel-default .espace'>
-                        <div class='panel-heading'>".$line['nomForma']."</div>
+                        echo "<div class='panel panel-default espace'>
+                        <div class='panel-heading'>".$line['nomForma']."id de la formation :" .$line['id_formation']."</div>
                         <div class='panel-body'>
                         <i>".$line['descriptionForma']."</i><br><hr>
                         <b>Prix de la Formation:</b> ".$line['prixForma']."€<br>
@@ -186,7 +199,7 @@
                         <b>Durée:</b> ".$line['dureeForma']." Jours
                         </div>
                         <p class='right-cart'>
-                        <a href='details.php' class='btn btn-primary a'>
+                        <a href='AjouterPanier.php' class='btn btn-primary a'>
                             <i class='fa fa-shopping-cart'>
                             Ajouter au Panier
                             </i>
@@ -195,26 +208,6 @@
                       </div>";
                       }
                     }
-                    else{
-                        foreach($tableFrmAll as $line){
-                          echo "<div class='panel panel-default .espace'>
-                          <div class='panel-heading'>".$line['nomForma']."</div>
-                          <div class='panel-body'>
-                          <i>".$line['descriptionForma']."</i><br><hr>
-                          <b>Prix de la Formation:</b> ".$line['prixForma']."€<br>
-                          <b>Lieu:</b> ".$line['lieuxForma']."<br>
-                          <b>Durée:</b> ".$line['dureeForma']." Jours
-                          </div>
-                          <p class='right-cart'>
-                          <a href='details.php' class='btn btn-primary a'>
-                              <i class='fa fa-shopping-cart'>
-                              Ajouter au Panier
-                              </i>
-                          </a>
-                          </p>
-                        </div>";
-                        }
-                      }
                     ?>
                 </div>
             </div>

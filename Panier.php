@@ -1,7 +1,8 @@
-<?php 
+<?php
 session_start();
-?>
 
+$cmd = "SELECT * FROM panier Where "
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +16,7 @@ session_start();
     <!--declaration des fichiers javascript: JQUERY et bootstrap js-->
     <script type="text/javascript" src="js/jquery-331.min.js"></script>
     <script src="js/bootstrap-337.min.js"></script>
-    <title>Accueil WebVp</title>
+    <title>Compte Webvp</title>
     
 </head>
 <!--Mettre showroom.php sur la page d'acceuil-->
@@ -29,7 +30,7 @@ session_start();
           </div><!--col md 6 offre debut-->
         
           <div class="col-md-6"><!--col md 6 debut-->
-
+            
               <ul class="menu"><!--cmenu debut-->
               <?php if(!isset($_SESSION['is_logged']) == true){ ?>
                     <li>
@@ -41,7 +42,7 @@ session_start();
                   <?php } else{ ?>
                   <li>
                       <a href="Profil.php">
-                      Bienvenue <?php echo $_SESSION['name'] ;?>
+                      Bonjour <?php echo $_SESSION['name'] ;?>
                       </a>
                   </li>
                   <li>
@@ -49,6 +50,7 @@ session_start();
                   </li>
                   <?php } ?>
               </ul><!--cmenu fin -->
+            
           </div><!--col md 6 fin-->
         
       </div><!--container fin-->
@@ -75,13 +77,13 @@ session_start();
         <div class="navbar-collapse" id="navigation"><!-- debut navbar collapse -->
             <div class="padding-nav"> <!-- debut padding-nav -->
               <ul class="nav navbar-nav left"><!-- debut nav navbar-nav left -->
-                  <li class="active">
+                  <li>
                       <a href="index.php">Accueil</a>
                   </li>
                   <li>
                       <a href="shopping.php?frm=1">Formations</a>
                   </li>
-                  <li>
+                  <li class="active">
                       <a href="Profil.php">Mon compte</a>
                   </li>
                   <li>
@@ -118,27 +120,51 @@ session_start();
        </div><!-- fin navbar collapse -->
    </div><!-- navbar container fin-->
 </div><!--navbar fin-->
+<div id="content"><!--debut Content -->
+    <div class="container"><!--debut Container -->
+        <div class="col-md-12"><!--debut col-md-12 -->
 
- <div class="shw-container">
- <section id="Accueil">
-     <h1>Bienvenue sur WebVP</h1>
-    <p>Avec plus de 70  formateurs et plus de 10000 personnes formées par an ,
-        nous offrons la chance d'être un(e) acteur/trice dans le secteur de la formation.</p>
-       <p>Que vous voulez <strong>enseigner</strong> ou <strong>étudier</strong>, Notre plateforme <strong>"WEBVP"</strong> à votre disposition. </p>
-       <a href="shopping.php?frm=0" class="button">Voir nos Formations</a>
-     </section>
-     <section id="Info">
-     <h1>MFC, Formation pour tous</h1>
-     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit felis eget sapien vehicula convallis.
-    Nullam tincidunt risus a felis tincidunt, nec consequat eros ultricies. Curabitur sit amet maximus diam</p>
-    <a href="Info.php" class="button">En savoir plus</a>
-    </section>
-    <section id="Contact">
-    <h1>Nous Contacter</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit felis eget sapien vehicula convallis.
-    Nullam tincidunt risus a felis tincidunt, nec consequat eros ultricies. Curabitur sit amet maximus diam</p>
-    </section>
-</div>
+            <ul class="breadcrumb"><!--debut breadcrumb -->
+              <li>
+                <a href="index.php">Accueil</a>
+              </li>
+            <li>
+                Panier
+            </li>
+            </ul><!--fin breadcrumb -->
+        </div><!--fin col-md-12 -->
 
-</body>
-</html>
+        <div id="cart" class="col-md-9">
+            <div class="box">
+                <form action="cart.php" method="POST" enctype="multipart/form-data">
+                    <h1>Votre Panier</h1>
+                    <p class="text-muted"> Vous avez 3 items dans votre Panier</p>
+                    <div class="table-responsive">
+                        <table class="table">
+                        <thread>
+                            <tr>
+                                <th colspan="2">Formation Choisie</th>
+                                <th>Prix</th>
+                                <th colspan="1">Supprimer</th>
+                            </tr>
+                        </thread>
+                        <tbody>
+                            <td>
+                                <!--nom formations-->
+                            </td>
+                            <td>
+                                <!--prix de la formation-->
+                            </td>
+                            <td>
+                                
+                            </td>
+                            <td>
+                                <button class="btn btn-info">Retirer</button>
+                            </td>
+                        </tbody>
+                        </table>
+                    </div>
+                </form>
+        
+            </div>
+        </div>

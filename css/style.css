@@ -249,4 +249,8 @@ section .button{
          url("/Font/Roboto/Roboto-Regular.ttf") format('truetype');
     font-style: normal;
 }
+/*Menu sur le coté style */
 
+.borderMod{
+ border-radius: 10%;
+}

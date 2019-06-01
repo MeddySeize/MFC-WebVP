@@ -118,6 +118,17 @@ session_start();
        </div><!-- fin navbar collapse -->
    </div><!-- navbar container fin-->
 </div><!--navbar fin-->
+<?php
+      if(isset($_GET['Created'])==true)
+      {
+        echo "<div class='goodalert'><p style= color: green;>Votre compte a été créé.</p> </div>";
+      }
+
+      if(isset($_GET['BadID'])==true)
+      {
+        echo "<div class='alert'><p>Votre Identifiant ou Mot de passe est incorrect.</p> </div>";
+      }
+    ?>
 <div id="content"><!--debut Content -->
     <div class="container"><!--debut Container -->
         <div class="col-md-12"><!--debut col-md-12 -->

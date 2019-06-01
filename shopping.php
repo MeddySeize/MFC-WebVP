@@ -1,7 +1,4 @@
-<?php
-    session_start();
-    print_r($_SESSION);
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -188,8 +185,11 @@
                         $tableFrmAll = $res->fetchAll();
                     }
                     /* affichage de la formation à partir de base de donnée*/
+                    //Ajouter l'id de formation dans le tableau  Panier;
                     if(isset($_GET['frm'])){
                       foreach($tableFrm as $line){
+                        $idForma =  $line['id_formation'];
+                        echo $idForma;
                         echo "<div class='panel panel-default espace'>
                         <div class='panel-heading'>".$line['nomForma']."id de la formation :" .$line['id_formation']."</div>
                         <div class='panel-body'>
@@ -205,9 +205,11 @@
                             </i>
                         </a>
                         </p>
-                      </div>";
-                      }
+                      </div>
+                      <?php array_push(".$_SESSION['Panier'].",".$idForma."); ?>"
+                    ;
                     }
+                }print_r($_SESSION['Panier']);
                     ?>
                 </div>
             </div>

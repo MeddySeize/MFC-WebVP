@@ -19,11 +19,11 @@
     $_SESSION["id"] = $data['id_utilisateur'];
     $_SESSION["type"] = "user";
     $_SESSION['name'] = $IdUti;
-    $_SESSION['Panier'] = [];
+    $_SESSION['Panier'] = array();
     header("location: shopping.php?frm=0");
 }
 else
 {
-  header("Location:Showroom.php?BadID=True");
+  header("Location:Profil.php?BadID=True");
 }
  ?>

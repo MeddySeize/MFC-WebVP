@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -188,10 +191,10 @@
                     //Ajouter l'id de formation dans le tableau  Panier;
                     if(isset($_GET['frm'])){
                       foreach($tableFrm as $line){
-                        $idForma =  $line['id_formation'];
-                        echo $idForma;
+                        //$idForma =  $line['id_formation'];
+                        //echo $idForma;
                         echo "<div class='panel panel-default espace'>
-                        <div class='panel-heading'>".$line['nomForma']."id de la formation :" .$line['id_formation']."</div>
+                        <div class='panel-heading'>".$line['nomForma']."</div>
                         <div class='panel-body'>
                         <i>".$line['descriptionForma']."</i><br><hr>
                         <b>Prix de la Formation:</b> ".$line['prixForma']."€<br>
@@ -205,11 +208,10 @@
                             </i>
                         </a>
                         </p>
-                      </div>
-                      <?php array_push(".$_SESSION['Panier'].",".$idForma."); ?>"
+                      </div>"
                     ;
                     }
-                }print_r($_SESSION['Panier']);
+                }
                     ?>
                 </div>
             </div>

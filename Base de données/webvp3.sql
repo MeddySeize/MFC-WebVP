@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 27 mai 2019 à 08:09
+-- Généré le :  lun. 27 mai 2019 à 11:58
 -- Version du serveur :  5.7.24
 -- Version de PHP :  7.2.14
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `webvp2`
+-- Base de données :  `webvp_meddy`
 --
 
 -- --------------------------------------------------------
@@ -82,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `formation` (
   `id_categorie` int(11) NOT NULL,
   PRIMARY KEY (`id_formation`),
   KEY `FK_catégorie` (`id_categorie`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `formation`
@@ -94,7 +94,13 @@ INSERT INTO `formation` (`id_formation`, `nomForma`, `descriptionForma`, `prixFo
 (4, 'Voix et Téléphone sur IP', NULL, 3500, 'Nice', 1, 5, 4),
 (5, 'Programmez en PHP 5', 'Si vous voulez apprendre à créer vous aussi des sites web dynamiques, c\'est votre jour de chance : vous êtes sur un cours pour vrais débutants en PHP !', 1800, 'Nantes', 1, 3, 5),
 (6, 'Développez vos Applications avec Android', 'Vous êtes prêts à conquérir le monde Android avec votre première application ? Alors, inscrivez-vous !', 2200, 'Toulouse', 1, 4, 5),
-(7, 'Créer des sites et Applications web avec HTML5 et CSS3', 'Vous souhaitez créer vos propres sites web ? Vous êtes au bon endroit ! Dans ce cours, vous apprendrez comment utiliser HTML5 et CSS3, les deux langages de programmation à la base de tous les sites web.', 2700, 'Nice', 1, 5, 5);
+(7, 'Créer des sites et Applications web avec HTML5 et CSS3', 'Vous souhaitez créer vos propres sites web ? Vous êtes au bon endroit ! Dans ce cours, vous apprendrez comment utiliser HTML5 et CSS3, les deux langages de programmation à la base de tous les sites web.', 2700, 'Nice', 1, 5, 5),
+(8, 'Excel 2007/2010', 'Apprenez à maîtriser l\'essentiel de Excel.', 2000, 'Bordeaux', 1, 5, 6),
+(9, 'Managez le système d\'information', '', 5000, 'Nantes', 1, 5, 1),
+(10, 'Chef de projet web', NULL, 5000, 'Bordeaux', 1, 10, 2),
+(11, 'Conduire un projet informatique', '', 4500, 'Lyon', 1, 10, 2),
+(12, 'Elaborer des tableaux de bord pour la DSI', NULL, 2500, 'Lyon', 1, 2, 1),
+(13, 'Concevoir une infrastructure d\'annuaire', NULL, 2700, 'Bordeaux', 1, 5, 3);
 
 -- --------------------------------------------------------
 

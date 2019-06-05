@@ -1,0 +1,59 @@
+body{
+    position: absolute;
+    background-image: url(/Images/prism.png);
+    left: 30%;
+    top: 5%;
+}
+
+.container{
+        width: 620px;
+        height: 720px;
+        border: 2px solid #009698;
+        border-radius: 10%;
+        color: #ffffff;
+        top: 10%;
+        left: 25%;
+        font-size: 20px;
+}
+.content{
+    position: relative;
+    left: 3% ;
+}
+input[type=text], input[type=password] {
+    position: relative;
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0 5px 0;
+    display: inline-block;
+    border: none;
+    background: white;
+    color: black;
+  }
+
+.validebtn{
+    background-color: #009698;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    opacity: 0.9;
+    position: relative;
+    left: 20%;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+.goodalert{
+    padding: 20px;
+    background-color:green; /* Red */
+    color: white;
+    margin-bottom: 0px;
+    text-align: center;
+}
